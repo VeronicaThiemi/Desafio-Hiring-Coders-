@@ -1,29 +1,12 @@
-const form = document.getElementById('form')
+let nameField = document.getElementById("name");
+let emailField = document.getElementById("email");
+let saveButton = document.getElementById("saveButton");
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
+function saveResponses() {
+	localStorage.setItem("name", nameField.value);
+	localStorage.setItem("email", emailField.value);
+}
 
-  let name = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
+saveButton.addEventListener("click", saveResponses);
 
-  let userData = {
-    name,
-    email,
-  }
 
-  let convertData = JSON.stringify(userData);
-
-  localStorage.setItem('userData', convertData)
-
-  let content = document.getElementById(content)
-
-  let carregando = `<p>CARREGANDO...</p>`
-  let pronto = `<p>PRONTO</p>`
-
-  content.innerHTML = carregando
-
-  setTimeout(() => {
-    content.innerHTML = pronto
-  }, 1000)
-
-})

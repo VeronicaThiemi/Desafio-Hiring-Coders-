@@ -279,7 +279,7 @@ main{
   font-size: 12px;
 }
 
-.subscribe-box .submitting-form .cadastro{
+.subscribe-box .submitting-form #saveButton{
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -291,7 +291,7 @@ main{
   letter-spacing: 4px
 }
 
-.subscribe-box .cadastro:hover {
+.subscribe-box #saveButton:hover {
   color: var(--medium-light-blue);
   border-radius: 5px;
   box-shadow: 0 0 5px var(--medium-light-blue),
